@@ -34,4 +34,12 @@ public class HomeTest extends BaseTest {
         // Get the text of the pop-up window and close it
         System.out.println(homePage.alertMsg.getText());
     }
+
+    @Test (testName = "US-03", description = "Verify social media links are clickable")
+    public void test03() {
+        String[] data = {"facebook", "twitter", "youtube"};
+        for (String text : data) {
+            Assert.assertTrue(getDriver().findElement(By.xpath("//li/a[@data-testid='" + text + "']")).isEnabled());
+        }
+    }
 }
