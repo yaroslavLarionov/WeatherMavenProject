@@ -87,6 +87,7 @@ public class BasePage {
                 driver.switchTo().window(eachWindow);
             }
         }
+        sleep(1000L);
     }
 
 

@@ -11,4 +11,6 @@ public class TwitterPage extends BasePage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
+    public String twitterTitle = "The Weather Channel (@weatherchannel) / Twitter";
 }
