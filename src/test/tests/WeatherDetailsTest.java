@@ -1,4 +1,6 @@
 package tests;
 
-public class WeatherDetailsTest {
+import base.BaseTest;
+
+public class WeatherDetailsTest extends BaseTest {
 }

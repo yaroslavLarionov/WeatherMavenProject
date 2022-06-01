@@ -1,4 +1,6 @@
 package tests;
 
-public class FacebookTest {
+import base.BaseTest;
+
+public class FacebookTest extends BaseTest {
 }

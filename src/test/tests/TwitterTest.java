@@ -1,4 +1,6 @@
 package tests;
 
-public class TwitterTest {
+import base.BaseTest;
+
+public class TwitterTest extends BaseTest {
 }
