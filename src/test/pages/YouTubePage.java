@@ -11,4 +11,6 @@ public class YouTubePage extends BasePage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
+    public String youtubeTitle = "The Weather Channel - YouTube";
 }
