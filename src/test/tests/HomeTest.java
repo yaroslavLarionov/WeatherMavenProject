@@ -2,12 +2,7 @@ package tests;
 
 import base.BasePage;
 import base.BaseTest;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -37,9 +32,10 @@ public class HomeTest extends BaseTest {
 
     @Test (testName = "US-03", description = "Verify social media links are clickable")
     public void test03() {
-        String[] data = {"facebook", "twitter", "youtube"};
-        for (String text : data) {
-            Assert.assertTrue(getDriver().findElement(By.xpath("//li/a[@data-testid='" + text + "']")).isEnabled());
+        WebElement[] data = {homePage.facebookBtn, homePage.twitterBtn, homePage.youtubeBtn};
+        for (WebElement eachBtn : data) {
+            Assert.assertTrue(eachBtn.isEnabled());
         }
     }
+
 }

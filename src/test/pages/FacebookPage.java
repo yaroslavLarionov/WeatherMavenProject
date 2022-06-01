@@ -11,4 +11,6 @@ public class FacebookPage extends BasePage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
+    public String titleFacebook = "The Weather Channel - Home | Facebook";
 }

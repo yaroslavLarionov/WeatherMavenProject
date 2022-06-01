@@ -1,7 +1,6 @@
 package pages;
 
 import base.BasePage;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,5 +19,13 @@ public class HomePage extends BasePage {
     @FindBy (xpath = "//section[@id='privacy-data-notice']")
     public WebElement alertMsg;
 
+    @FindBy (xpath = "//li/a[@data-testid='facebook']")
+    public WebElement facebookBtn;
+
+    @FindBy (xpath = "//li/a[@data-testid='twitter']")
+    public WebElement twitterBtn;
+
+    @FindBy (xpath = "//li/a[@data-testid='youtube']")
+    public WebElement youtubeBtn;
 
 }

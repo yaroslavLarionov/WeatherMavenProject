@@ -7,6 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Set;
+
 public class BasePage {
     protected WebDriver driver;
 
@@ -75,6 +77,16 @@ public class BasePage {
             }
         }
 
+    }
+
+    public void switchToNextWindow() {
+        String currentWindow = driver.getWindowHandle();
+        Set<String> allWindows = driver.getWindowHandles();
+        for (String eachWindow : allWindows) {
+            if (!eachWindow.equals(currentWindow)) {
+                driver.switchTo().window(eachWindow);
+            }
+        }
     }
 
 
