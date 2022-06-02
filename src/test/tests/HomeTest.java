@@ -1,6 +1,5 @@
 package tests;
 
-import base.BasePage;
 import base.BaseTest;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -8,9 +7,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 
+import java.util.List;
+
 public class HomeTest extends BaseTest {
     HomePage homePage;
-    BasePage basePage;
 
     @BeforeMethod
     public void localSetUp() {
@@ -37,5 +37,6 @@ public class HomeTest extends BaseTest {
             Assert.assertTrue(eachBtn.isEnabled());
         }
     }
+
 
 }

@@ -28,4 +28,7 @@ public class HomePage extends BasePage {
     @FindBy (xpath = "//li/a[@data-testid='youtube']")
     public WebElement youtubeBtn;
 
+    @FindBy (linkText = "10 Day")
+    public WebElement tenDayBtn;
+
 }
