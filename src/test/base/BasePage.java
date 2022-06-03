@@ -33,16 +33,16 @@ public class BasePage {
     }
 
     public void sendKeys(WebElement element, String inputText){
+        waitForElementVisibility(element);
         moveIntoView(element);
         highlightElement(element);
-        waitForElementVisibility(element);
         element.sendKeys(inputText);
     }
 
     public String getText(WebElement element){
+        waitForElementVisibility(element);
         moveIntoView(element);
         highlightElement(element);
-        waitForElementVisibility(element);
         return element.getText();
     }
 
